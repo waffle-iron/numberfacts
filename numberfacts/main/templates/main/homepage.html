@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+  {% block content_base %}
+  <ul>
+    {% for number in numbers %}
+      <li>
+        <a href="{% url 'main:view_number' number.number %}"># {{number.number}}</a> - {{number.facts|length}} facts
+      </li>
+    {% endfor %}
+  </ul>
+  {% endblock %}

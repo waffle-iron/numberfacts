@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+  {% block content_base %}
+
+
+  <h1># {{the_number.number}}</h1>
+  <p>
+    here are some facts about the number {{the_number.number}} :
+  </p>
+
+  <ul>
+{% for fact in the_number.facts %}
+  <li>{{fact.fact}}</li>
+{% endfor %}
+</ul>
+
+  {% endblock %}

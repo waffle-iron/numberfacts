@@ -1,0 +1,16 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/styles.css' %}" />
+    <meta charset="utf-8">
+    <title>base</title>
+  </head>
+  <body>
+    <header>
+      <a href="{% url 'main:homepage' %}">number facts!!</a>
+    </header>
+    {% block content_base %}{% endblock %}
+  </body>
+</html>
